@@ -48,5 +48,18 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>UIAppFonts</key>
+<array>
+    <string>CommonartGaramond-Medium.ttf</string>
+    <string>CommonartGaramond-Regular.ttf</string>
+    <string>Tinos-Bold.ttf</string>
+    <string>Tinos-Regular.ttf</string>
+    %string=MaterialCommunityIcons.ttf</string>
+    <string>EvilIcons.ttf</string>
+    <string>MaterialIcons.ttf</string>
+    <string>Ionicons.ttf</string>
+    <string>AntDesign.ttf</string>
+    <string>FontAwesome.ttf</string>
+</array>
 </dict>
 </plist>
