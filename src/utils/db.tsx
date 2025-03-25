@@ -1,5 +1,5 @@
 export const menuData = [
-    { name: 'Kart', iconUri: require('../assets/icons/shopping.png') },
+    { name: 'ADCart', iconUri: require('../assets/icons/shopping.png') },
     { name: 'Grocery', iconUri: require('../assets/icons/grocery.png') },
     { name: 'Travel', iconUri: require('../assets/icons/travel.png') },
     { name: 'Pay', iconUri: require('../assets/icons/pay.png') }
