@@ -13,6 +13,7 @@
     "create-apk": "cd android && ./gradlew assembleRelease"
   },
   "dependencies": {
+    "@homielab/react-native-auto-scroll": "^0.0.10",
     "@react-navigation/bottom-tabs": "^7.2.1",
     "@react-navigation/native": "^7.0.15",
     "@react-navigation/native-stack": "^7.2.1",
