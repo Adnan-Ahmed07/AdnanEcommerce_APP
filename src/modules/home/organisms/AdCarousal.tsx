@@ -3,6 +3,7 @@ import React, { FC, useState } from 'react'
 import { screenWidth } from '@utils/Constants';
 import Carousel from 'react-native-reanimated-carousel';
 import FlimSlip from '../molecules/FlimSlip';
+import Dots from '../atoms/Dots';
 
 
 const AdCarousal:FC<{data:any}>  = ({data}) => {
@@ -37,9 +38,11 @@ const AdCarousal:FC<{data:any}>  = ({data}) => {
          { 
           data?.data?.map((item:any,index:any)=>{ 
             return(
-              <Text>
-
-              </Text>
+             <Dots
+             active={active}
+             index={index}
+             key={index}
+             />
             )
           })
          }
