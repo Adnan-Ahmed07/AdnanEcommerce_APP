@@ -14,7 +14,7 @@ const Categories:FC<{data:any}> = ({data}) => {
     )
   }
   return (
-    <ScrollView>
+    <ScrollView horizontal showsHorizontalScrollIndicator={false}>
       <FlatList
       numColumns={Math.ceil(data?.data?.length/2)}
       data={data?.data}

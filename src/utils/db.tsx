@@ -48,11 +48,11 @@ export const dynamicDashboardData = [
         type: "horizontal_list",
         title: "Best Deals",
         data: [
-            { id: 1, path: "", image_uri: 'https://rukminim2.flixcart.com/fk-p-flap/480/720/image/4d790d95eab9b756.jpg?q=20' },
-            { id: 2, path: "", image_uri: 'https://rukminim2.flixcart.com/fk-p-flap/480/720/image/d269de10795cd29e.jpg?q=20' },
-            { id: 3, path: "", image_uri: 'https://rukminim2.flixcart.com/fk-p-flap/480/720/image/4ce286f7b3ddd5db.jpg?q=20' },
+            { id: 1, path: "", image_uri: 'https://iili.io/34L0e0g.png' },
+            { id: 2, path: "", image_uri: 'https://iili.io/34LXYps.pngv' },
+            { id: 3, path: "", image_uri: 'https://iili.io/34LjbkX.png' },
             { id: 4, path: "", image_uri: 'https://rukminim2.flixcart.com/fk-p-flap/480/720/image/7723bd9e53937442.jpg?q=20' },
-            { id: 5, path: "", image_uri: 'https://rukminim2.flixcart.com/fk-p-flap/480/720/image/e6a8222e73b47590.jpg?q=20' },
+            { id: 5, path: "", image_uri: 'https://iili.io/34L8ByB.png' },
         ]
     },
     {
