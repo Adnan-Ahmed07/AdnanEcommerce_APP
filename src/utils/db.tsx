@@ -87,7 +87,7 @@ export const dynamicDashboardData = [
     },
     {
         type: "horizontal_list",
-        title: "Featured on Kart",
+        title: "Featured on ADKart",
         data: [
             { id: 1, path: "", image_uri: 'https://rukminim2.flixcart.com/fk-p-flap/480/720/image/a346fdef9457ab5e.jpg?q=20' },
             { id: 2, path: "", image_uri: 'https://rukminim2.flixcart.com/fk-p-flap/480/720/image/1bd8d123afe6cd26.jpg?q=20' },

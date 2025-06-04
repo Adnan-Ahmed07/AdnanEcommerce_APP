@@ -5,12 +5,16 @@ import AdCarousal from '../organisms/AdCarousal';
 import Categories from '../organisms/Categories';
 import Sponser from '../organisms/Sponser';
 import VerticalList from '../organisms/VerticalList';
+import HorizontalList from '../organisms/HorizontalList';
+import AnimatedHorizontalList from '../organisms/AnimatedHorizontalList';
 
 const SectionComponents: { [key: string]: React.ComponentType<any> } = {
   ad_carousal: AdCarousal,
   categories: Categories,
   sponser:Sponser,
   vertical_list:VerticalList,
+  horizontal_list:HorizontalList,
+  animated_horizontal_list: AnimatedHorizontalList,
 };
 
 
