@@ -8,19 +8,20 @@ initialState:{
   error: null,
 },
 reducers:{ 
+   setLoading: (state) => {
+    state.loading = true
+  },
   setData: (state, action) => {
   state.loading = false;
     state.data = action.payload;
     state.error = null;
   },
-  setLoading: (state) => {
-    state.loading = true
-  },
+ 
   setError: (state, action) => {
     state.loading = false;
     state.error = action.payload;
   },
 }
 })
-export const { setData, setLoading, setError } = categoriesSlice.actions;
+export const { setData, setError, setLoading } = categoriesSlice.actions
 export default categoriesSlice.reducer;
