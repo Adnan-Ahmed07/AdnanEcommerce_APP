@@ -14,6 +14,7 @@ import {useAppDispatch, useAppSelector} from '@store/reduxHook';
 import {getCategories} from './api/actions';
 import {RFValue} from 'react-native-responsive-fontsize';
 import {FONTS} from '@utils/Constants';
+import {navigate} from '@navigation/NavigationUtil';
 
 const Categories: FC = () => {
   const dispatch = useAppDispatch();
@@ -28,21 +29,32 @@ const Categories: FC = () => {
         <Text style={styles.title}>Categories</Text>
         <Text style={styles.subtitle}>Explore Our range of categories</Text>
       </View>
-      {loading ? 
-        <ActivityIndicator size='small' color='black' />
-       : 
+      {loading ? (
+        <ActivityIndicator size="small" color="black" />
+      ) : (
         <FlatList
           data={data}
           numColumns={2}
           keyExtractor={item => item._id.toString()}
           renderItem={({item}) => (
-            <TouchableOpacity style={styles.itemContainer}>
+            <TouchableOpacity
+              style={styles.itemContainer}
+              onPress={() =>
+                navigate('Products', {id: item._id, name: item.name})
+              }>
               <Image source={{uri: item?.image_uri}} style={styles.image} />
               <Text style={styles.name}>{item?.name}</Text>
             </TouchableOpacity>
           )}
+          ListFooterComponent={
+            <>
+              {error && <Text style={styles.subtitle}>There was an Error</Text>}
+            </>
+          }
+          showsVerticalScrollIndicator={false}
+          contentContainerStyle={styles.contentContainer}
         />
-      }
+      )}
     </View>
   );
 };
@@ -50,6 +62,9 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#E7F9EC',
+  },
+  contentContainer: {
+    padding: 10,
   },
   title: {
     fontSize: RFValue(18),
