@@ -3,6 +3,7 @@ import React from 'react'
 import { navigate } from '@navigation/NavigationUtil';
 import Icon from '@components/Atoms/Icon';
 import { RFValue } from 'react-native-responsive-fontsize';
+import UniversalAdd from './UniversalAdd';
 
 const ProductItem = ({item,isOdd}:any) => {
   return (
@@ -29,8 +30,10 @@ const ProductItem = ({item,isOdd}:any) => {
           {" "}${item?.price}
         </Text>
        <View style={styles.flexRow}>
-        <View style={styles.hotDealContainer}></View>
+        <View style={styles.hotDealContainer}>
         <Text style={styles.hotDealText}>Hot Deal</Text>
+        </View>
+        <UniversalAdd item={item}/>
        </View>
       </View>
     </View>
