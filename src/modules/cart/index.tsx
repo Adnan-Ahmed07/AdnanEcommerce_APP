@@ -7,6 +7,7 @@ import { selectCartItems } from './api/slice'
 import { navigate } from '@navigation/NavigationUtil'
 import { Colors } from '@utils/Constants'
 import OrderItem from './atoms/OrderItem'
+import PlaceOrderButton from './atoms/PlaceOrderButton'
 
 const Cart = () => {
   const carts=useAppSelector(selectCartItems);
@@ -38,6 +39,10 @@ const Cart = () => {
         <Text style={styles.shopNowText}>Shop Now</Text>
       </TouchableOpacity>
       </View>
+    }
+    { 
+      carts.length >0 &&
+      <PlaceOrderButton />
     }
    </CustomSafeAreaView>
   )

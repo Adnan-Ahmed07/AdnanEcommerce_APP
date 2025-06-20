@@ -1,6 +1,7 @@
 import { View, Text, StyleSheet, Image } from 'react-native'
 import React, { FC } from 'react'
 import UniversalAdd from '@modules/products/atoms/UniversalAdd'
+import { RFValue } from 'react-native-responsive-fontsize'
 
 const OrderItem:FC<{item:any}> = ({item}) => {
   return (
@@ -8,6 +9,11 @@ const OrderItem:FC<{item:any}> = ({item}) => {
     <View style={styles.imageContainer}>
       <Image source={{uri: item?.image_uri}} style={styles.img} />
       <UniversalAdd item={item} />
+    </View>
+    <View style={styles.itemContainer}>
+     <Text style={styles.itemName}>{item.name}</Text>
+      <Text style={styles.itemDetails}>{item.price} X {item.quantity}</Text>
+       <Text style={styles.itemTotal}>Total:$ {item.totalPrice}</Text>
     </View>
     </View>
   )
@@ -35,6 +41,25 @@ const styles=StyleSheet.create({
     borderColor:"#ccc",
     width:"100%",
     marginBottom:10
+  },
+  itemContainer:{ 
+    width:"70%"
+  },
+  itemName:{ 
+    fontSize:RFValue(12),
+    fontWeight:'500',
+    color:'#000',
+  },
+  itemDetails:{ 
+    fontSize:RFValue(10),
+    color:'#666',
+    marginTop:4
+  },
+  itemTotal:{ 
+    fontSize:RFValue(12),
+    fontWeight:'600',
+    color:'#000',
+    marginTop:8
   }
 })
 export default OrderItem
