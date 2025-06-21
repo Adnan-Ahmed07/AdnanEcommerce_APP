@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { RFValue } from 'react-native-responsive-fontsize'
 import { useAppSelector } from '@store/reduxHook'
 import { selectTotalCartPrice } from '../api/slice'
+import LoginModal from '@modules/account/molecules/LoginModal'
 
 const PlaceOrderButton = () => {
   const price=useAppSelector(selectTotalCartPrice)
@@ -28,6 +29,7 @@ const PlaceOrderButton = () => {
      }
     </TouchableOpacity>
   </View>
+  {isVisible && <LoginModal onClose={()=> setIsVisible(false)} visible={isVisible}/>}
   </>
   )
 }
